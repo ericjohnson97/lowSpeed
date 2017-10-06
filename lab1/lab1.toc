@@ -1,0 +1,10 @@
+\contentsline {section}{\numberline {1}Introduction}{3}
+\contentsline {section}{\numberline {2}Procedures}{3}
+\contentsline {section}{\numberline {3}Results}{3}
+\contentsline {subsection}{\numberline {3.1}Flow Visualization}{3}
+\contentsline {subsection}{\numberline {3.2}Total Pressure from Wake}{3}
+\contentsline {subsection}{\numberline {3.3}Velocity Profile}{3}
+\contentsline {subsection}{\numberline {3.4}Surface Pressure Coefficients}{3}
+\contentsline {section}{\numberline {4}Conclusion}{3}
+\contentsline {section}{\numberline {5}Appendix}{3}
+\contentsline {section}{\numberline {6}References}{3}
