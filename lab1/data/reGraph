@@ -1,0 +1,9 @@
+clc; clear all
+
+reGraph = imread('reGraph');
+
+figure(1)
+imshow(reGraph);
+hold on
+axis([ 10*10^-1 10*10^7 .06 400 ]);
+
