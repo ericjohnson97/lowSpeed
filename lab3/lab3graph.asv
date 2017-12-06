@@ -54,21 +54,23 @@ dp = 0.0000001; % uncertainty for electronic pitot tubes
 %drag coefficient: Cd = 2*integral[ (U(y)/Uinf) - (U(y)/Uinf)^2 ] (dy/c) from - 
 
 for run=1:2
+    g = 0;
     for i=1:length(rakeData(:,:,run))
         vPitot(i) = sqrt((rakeData(i,1,run) * 2) / air);
         dv = abs((sqrt(2)/2)*sqrt(1/(air*rakeData(i,1,run)))*dp);
+        %g = (( vPitot(i)/ v(6) ) - (vPitot(i)/v(6))^2 )
         g(i) = ( ( vPitot(i)/ Vinf)  - (vPitot(i)/Vinf)^2 )*2*(dy/c);
-        dg(i) = abs( ((1/Vinf)) + 2*(vPitot(i))*dv) + abs( -vPitot(i)*(Vinf^-2) + 2*(vPitot(i)*(Vinf^-2)*vPitot(i))*v_err);               
+        dg(i) = abs( ((1/Vinf)) + 2*(vPitot(i))*dv) + abs( -vPitot(i)*(Vinf^-2) + 2*(vPitot(i)*(Vinf^-2)*vPitot(i))*v_err);           
+        
     end
+    
     dc = norm(dg);
     cd = sum(g);
     fprintf('The coefficient of drag for the %s is %f +- %f \n', ball(run), cd,  dc);
+
     
 end
 mu = 1.983e-5;
-Re = (air*Vinf*c)/mu;
-fprintf('The Reynolds number for the balls is %e \n', Re);
-
-
-
+Re = (air*Vinf*c)/mu
+fprintf
 
