@@ -67,7 +67,8 @@ for run=1:2
 end
 mu = 1.983e-5;
 Re = (air*Vinf*c)/mu;
-fprintf('The Reynolds number for the balls is %e \n', Re);
+deltaRe = abs((air*c)/mu)*v_err;
+fprintf('The Reynolds number for the balls is %e +- %f\n', Re, deltaRe);
 
 
 
